@@ -22,6 +22,8 @@ def about():
     return render_template("about.html", page_title="About", company=data)
 
 # This is advanced routing in Flask:
+
+
 @app.route("/about/<member_name>")
 def about_member(member_name):
     member = {}
@@ -51,4 +53,3 @@ if __name__ == "__main__":
         host=os.environ.get("IP", "0.0.0.0"),
         port=int(os.environ.get("PORT", "5000")),
         debug=True)
-
